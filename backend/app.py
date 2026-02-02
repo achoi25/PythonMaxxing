@@ -78,8 +78,6 @@ SCHEMA = {
             {"cond": "'a' in x", "desc": "contains the letter 'a'"},
             {"cond": "x.startswith('c')", "desc": "starts with 'c'"},
             {"cond": "len(x) < 3", "desc": "has less than 3 letters"},
-            {"cond": "x.isupper()", "desc": "is all uppercase"},
-            {"cond": "x.islower()", "desc": "is all lowercase"},
             {"cond": "x.endswith('e')", "desc": "ends with 'e'"},
             {"cond": "len(x) == 4", "desc": "has exactly 4 letters"},
         ],
