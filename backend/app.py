@@ -31,7 +31,7 @@ SCHEMA = {
         "list[float]": {"var": "vals",  "gen": gen_float_list},
         "list[str]":   {"var": "words", "gen": gen_word_list},
         "dict":        {"var": "data",  "gen": gen_dict, "iter": ".items()", "unpack": "k, v"},
-        "range":       {"var": "i",     "gen": lambda: range(random.randint(5, 15))},
+        "range":       {"var": "i",     "gen": lambda: range(random.randint(-15, 0), random.randint(0, 15))},
     },
     "outputs": {
         "int": [
