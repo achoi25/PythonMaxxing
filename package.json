@@ -1,0 +1,19 @@
+{
+  "name": "pythonmaxxing",
+  "version": "1.0.0",
+  "description": "Full-stack application with Python backend and React frontend",
+  "private": true,
+  "scripts": {
+    "frontend:dev": "cd frontend && npm run dev",
+    "frontend:build": "cd frontend && npm run build",
+    "frontend:preview": "cd frontend && npm run preview",
+    "frontend:lint": "cd frontend && npm run lint",
+    "backend:dev": "cd backend && python app.py"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^12.8.0"
+  }
+}
