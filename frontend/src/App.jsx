@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './index.css';
 
-const API_URL = 'https://pythonmaxxing.onrender.com/';
+const API_URL = 'https://pythonmaxxing.onrender.com';
 
 function App() {
   const [gameMode, setGameMode] = useState('menu');
