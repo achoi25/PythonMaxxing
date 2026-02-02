@@ -56,7 +56,7 @@ function App() {
     setUserCode('');
     setResult(null);
 
-    let url = '${API_URL}/api/question';
+    let url = `${API_URL}/api/question`;
     if (selectedLevel) {
       url += `?level=${selectedLevel}`;
     } else if (timedModeActive && selectedLevels.length > 0) {
@@ -80,7 +80,7 @@ function App() {
     if (!userCode.trim() || !question) return;
 
     try {
-      const response = await fetch('${API_URL}/api/check', {
+      const response = await fetch(`${API_URL}/api/check`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
