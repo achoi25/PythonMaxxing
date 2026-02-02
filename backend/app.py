@@ -98,9 +98,8 @@ SCHEMA = {
             {"expr": "'pos' if x > 0 else 'neg' if x < 0 else 'zero'", "desc": "positive, negative, or zero label"},
         ],
         "str": [
-            {"expr": "x.upper() if len(x) > 4 else x", "desc": "uppercase long words only"},
+            {"expr": "x.upper() if len(x) > 4 else x", "desc": "uppercase long words only (more than 4 letters)"},
             {"expr": "len(x) if 'a' in x else -1", "desc": "length if 'a' is present, else -1"},
-            {"expr": "x.lower() if x.isupper() else x", "desc": "lowercase if all uppercase"},
             {"expr": "x + 's' if len(x) > 3 else x", "desc": "add 's' if longer than 3 letters"},
         ]
     }
