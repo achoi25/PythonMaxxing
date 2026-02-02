@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './index.css';
 
+const API_URL = 'https://pythonmaxxing.onrender.com/';
+
 function App() {
   const [gameMode, setGameMode] = useState('menu');
   const [level, setLevel] = useState(null);
@@ -54,7 +56,7 @@ function App() {
     setUserCode('');
     setResult(null);
 
-    let url = 'http://localhost:5000/api/question';
+    let url = '${API_URL}/api/question';
     if (selectedLevel) {
       url += `?level=${selectedLevel}`;
     } else if (timedModeActive && selectedLevels.length > 0) {
@@ -78,7 +80,7 @@ function App() {
     if (!userCode.trim() || !question) return;
 
     try {
-      const response = await fetch('http://localhost:5000/api/check', {
+      const response = await fetch('${API_URL}/api/check', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
