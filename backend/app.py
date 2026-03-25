@@ -95,7 +95,7 @@ SCHEMA = {
             {"expr": "'even' if x % 2 == 0 else 'odd'", "desc": "replace with 'even' or 'odd'"},
             {"expr": "x if x > 0 else -x", "desc": "keep absolute value representation"},
             {"expr": "x * 2 if x > 5 else x", "desc": "double if greater than 5"},
-            {"expr": "'pos' if x > 0 else 'neg' if x < 0 else 'zero'", "desc": "positive, negative, or zero label"},
+            {"expr": "'pos' if x > 0 else 'neg' if x < 0 else 'zero'", "desc": "label with pos, neg, or zero"},
         ],
         "str": [
             {"expr": "x.upper() if len(x) > 4 else x", "desc": "uppercase long words only (more than 4 letters)"},
@@ -185,7 +185,9 @@ class QuestionFactory:
             return QuestionFactory.generate(1)
 
         return prompt_text, context, answer
-
+@app.route('/api/health', methods=['GET'])
+def health_check():
+    return jsonify({"status": "ok"})
 @app.route('/api/question', methods=['GET'])
 def get_question():
     level = request.args.get('level', default=None, type=int)
